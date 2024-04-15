@@ -1,0 +1,28 @@
+                                            <DETAILS>
+
+From this piece of code, I can conclude the following about the behavior of this in traditional functions and arrow functions within objects:
+
+Traditional Function (student.greet):
+
+In the greet method of the student object, this correctly refers to the student object itself.
+When the greet method is called (student.greet()), the output is "Welcome To Governor's IT Initiative, Huma Mohsin", indicating that this.name correctly refers to the name property of the student object.
+
+
+Arrow Function (faculty.announcement):
+
+In the announcement method of the faculty object, which is an arrow function, this does not reference the faculty object as expected. Instead, it refers to the surrounding lexical scope.
+When faculty.announcement() is called, the output for this.assigned_course and this.skillsNeeded is likely to be undefined, as this does not refer to the faculty object. Instead, it may refer to the global scope (or undefined in strict mode).
+
+Arrow functions do not have their own this context and inherit this from the surrounding code where they are defined. This is known as lexical scoping of this.
+
+
+In summary, when defining methods within an object:
+
+Use traditional functions if you want this to reference the object itself and access its properties.
+Avoid using arrow functions for methods within an object, especially if you need to access this, as they will not behave as expected and may lead to errors or unexpected behavior.
+
+//Author-HUMA MOHSIN
+
+
+
+
